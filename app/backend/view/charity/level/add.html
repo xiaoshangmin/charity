@@ -1,0 +1,9 @@
+<form class="layui-form" lay-filter="form">
+    {:form_input('name', 'text', ['label' => 'Name', 'verify' => ''], '')}
+{:form_radio('status' ,$statusList, ['label' => 'Status', 'verify' => ''], '1')}
+{:form_input('sort', 'number', ['label' => 'Sort', 'verify' => ''], '0')}
+{:form_input('description', 'text', ['label' => 'Description', 'verify' => ''], '')}
+
+    {:form_submitbtn()}
+</form>
+

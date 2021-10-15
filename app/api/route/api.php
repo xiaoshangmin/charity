@@ -21,3 +21,7 @@ Route::get(':version/member/index','api/:version.member/index');
 Route::post(':version/token','api/:version.token/accessToken');
 Route::post(':version/token/refresh','api/:version.token/refresh');
 
+Route::post(':version/charity/level','api/:version.charity/level');
+Route::post(':version/charity/user','api/:version.charity/userList');
+Route::get(':version/charity/detail/:uid','api/:version.charity/userDetail');
+

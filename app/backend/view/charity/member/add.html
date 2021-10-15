@@ -1,0 +1,11 @@
+<form class="layui-form" lay-filter="form">
+    {:form_input('username', 'text', ['label' => 'Username', 'verify' => 'required'], '')}
+{:form_input('enterprise', 'text', ['label' => 'Enterprise', 'verify' => 'required'], '')}
+{:form_select('level_id',$levelIdList, ['label' => 'LevelId', 'verify' => 'required', 'search' => 1], [], '')}
+{:form_upload('avatar',$formData?$formData['avatar']:'' ,['label' => 'Avatar', 'verify' => 'required', 'type' => 'radio', 'mime' => 'image', 'path' => 'CharityMember', 'num' => '1'])}
+{:form_input('description', 'text', ['label' => 'Description', 'verify' => ''], '')}
+{:form_editor('content', 'content', 2,['label'=>'Content','verify' => ''])}
+
+    {:form_submitbtn()}
+</form>
+
