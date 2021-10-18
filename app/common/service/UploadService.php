@@ -284,7 +284,7 @@ class UploadService extends AbstractService
             throw new Exception(lang('File size is limited'));
         }
         //文件类型限制
-        if ($this->fileExt !='*' && !in_array($file->extension(),explode(',',$this->fileExt))) {
+        if ($this->fileExt !='*' && !in_array(strtolower($file->extension()),explode(',',$this->fileExt))) {
             throw new Exception(lang('File type is limited'));
         }
         return true;
