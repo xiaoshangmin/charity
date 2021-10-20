@@ -19,7 +19,7 @@ class Member extends \app\common\controller\Backend
     public function __construct(App $app)
     {
         parent::__construct($app);
-        $this->modelClass = new CharityMemberModel();
+        $this->modelClass = new CharityMemberModel(); 
         View::assign('levelIdList',$this->modelClass->getLevelIdList());
 
 
