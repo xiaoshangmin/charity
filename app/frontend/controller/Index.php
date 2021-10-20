@@ -24,8 +24,9 @@ class Index extends Frontend {
         parent::__construct($app);
     }
     public function index(){
-        header("Location:/2gZlbJX5TN.php");
-        return view();
+        // header("Location:/2gZlbJX5TN.php");
+        // return view();
+        return 403;
     }
     /**
      * @return \think\Response
