@@ -30,6 +30,7 @@ define(['table','form'], function (Table,Form) {
                     {field:'enterprise', title: __('Enterprise'),align: 'center'},
                     {field:'level_id',  search: 'select',title: __('LevelId'),selectList:levelIdList,sort:true,templet: Table.templet.select},
                     {field:'avatar',title: __('Avatar'),templet: Table.templet.image,search:false},
+                    {field:'sort',title: __('Sort'),align: 'center',edit:'text',sort:true,search:false},
                     {field:'description', title: __('Description'),align: 'center',search:false},
                     {field:'content', title: __('Content'),align: 'center',search:false},
                     {field:'create_time',title: __('CreateTime'),align: 'center',timeType:'datetime',dateformat:'yyyy-MM-dd HH:mm:ss',searchdateformat:'yyyy-MM-dd HH:mm:ss',search:'time',sort:true,search:false},

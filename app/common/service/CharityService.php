@@ -15,14 +15,14 @@ class CharityService extends AbstractService
     public static function getLevelList()
     {
         return CharityLevel::where('status', 1)->hidden(['create_time', 'update_time', 'delete_time', 'sort', 'status'])
-            ->order('sort', 'asc')->select();
+            ->order('sort', 'desc')->select();
     }
 
     public static function getUserList(int $levelId, int $page, int $pageSize)
     {
         return CharityMember::withJoin(['charityLevel' => ['name']])
             ->where('level_id', $levelId)->hidden(['create_time', 'update_time', 'delete_time', 'sort', 'status'])
-            ->order('id', 'desc')->page($page, $pageSize)->select();
+            ->order('sort', 'desc')->page($page, $pageSize)->select();
     }
 
     public static function countUserByLevelId(int $levelId)
